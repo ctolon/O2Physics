@@ -191,7 +191,7 @@ struct AnalysisTrackSelection {
   // NOTE: For now, the candidate electron cuts must be provided first, then followed by any other needed selections
   Configurable<string> fConfigCuts{"cfgTrackCuts", "jpsiPID1", "Comma separated list of barrel track cuts"};
   Configurable<bool> fConfigQA{"cfgQA", false, "If true, fill QA histograms"};
-  Configurable<std::string> fConfigAddTrackHistogram{"cfgAddTrackHistogram", "", "Comma separated list of histograms"};
+  Configurable<std::string> fConfigAddTrackHistogram{"cfgAddTrackHistogram", "dca,its,tpcpid,tofpid,postcalib_electron,postcalib_pion,postcalib_proton", "Comma separated list of histograms"};
 
   HistogramManager* fHistMan;
   std::vector<AnalysisCompositeCut> fTrackCuts;
